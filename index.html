@@ -5,29 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Website</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-        header { background: #0073e6; color: white; padding: 20px; text-align: center; }
-        nav { display: flex; justify-content: center; background: #333; }
-        nav a { color: white; padding: 10px 20px; text-decoration: none; }
-        nav a:hover { background: #555; }
-        section { padding: 20px; }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            background: #0073e6;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        header img {
+            height: 50px;
+            margin-right: 20px; /* Space between the logo and the text */
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #333;
+        }
+
+        nav a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background: #555;
+        }
+
+        section {
+            padding: 20px;
+        }
     </style>
 </head>
 <body>
     <header>
-        <img src="assets\teamlogo.png" alt="Team Logo" style="height: 50px;">
+        <img src="assets/teamlogo.png" alt="Team Logo">
         <h1>Team 4</h1>
     </header>
     <nav>
         <a href="index.html">Home</a>
-        <a href="team-pages\Pierre_O.html">Pierre O</a>
-        <a href="team-pages\Rebka_G.html">Rebka G</a>
-       <a href="team-pages\Adam_K.html">Adam K</a>
+        <a href="team-pages/Pierre_O.html">Pierre O</a>
+        <a href="team-pages/Rebka_G.html">Rebka G</a>
+        <a href="team-pages/Adam_K.html">Adam K</a>
     </nav>
     <section>
         <h2>About Us</h2>
         <p>Welcome to our team webpage! We are Team 4.</p>
-        <p>Contact us: akibitok104@gmaill.com, pierremaix123@gmail.com, rebka.gebremichael@mnsu.edu</p>
+        <p>Contact us: akibitok104@gmail.com, pierremaix123@gmail.com, rebka.gebremichael@mnsu.edu</p>
     </section>
 </body>
 </html>
