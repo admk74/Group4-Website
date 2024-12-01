@@ -3,79 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pierre Ouattara's Profile</title>
-    <style>
-        #uploadedImage {
-            width: 200px;
-            height: auto;
-            display: none;
-            margin-top: 20px;
-        }
-        section {
-            margin: 20px;
-        }
-        p {
-            max-width: 600px;
-        }
-    </style>
+    <title>Member 1</title>
 </head>
 <body>
     <header>
-        <h1>Pierre Ouattara's Profile</h1>
+        <h1>Pierre Ouattara's</h1>
     </header>
     <section>
-        <div id="imageContainer">
-            <img id="uploadedImage" alt="Uploaded Image">
-        </div>
-        <form id="uploadForm">
-            <label for="fileInput">Upload an Image:</label>
-            <input type="file" id="fileInput" accept="image/*">
-            <button type="submit">Upload</button>
-        </form>
-    </section>
-    <section>
+        <img src="../assets/pierreimage.png" alt="pierreimage" style="width: 200px; height: auto;">
+     
         <h2>Name: Pierre Ouattara</h2>
-        <p>
-            Hi, my name is Pierre Ouattara. I am a graduate student in my first year in data science, 
-            but my undergraduate degree was in mechanical engineering. 
-            My hobbies are playing the guitar, learning new things, and video editing.
-        </p>
-        <a href="https://admk74.github.io/Group4-Website/index.html">Back to homepage</a>
+        <p> Hi,my name is Pierre Ouattara. I am a graduate student in my first year in data science, but my undergraduate degree was in mechanical engineering. My hobbies are playing the guitar, learning new things, and video editing.</p>
     </section>
-
-    <script>
-        const fileInput = document.getElementById('fileInput');
-        const uploadForm = document.getElementById('uploadForm');
-        const uploadedImage = document.getElementById('uploadedImage');
-
-        // Load the saved image from localStorage on page load
-        window.onload = () => {
-            const savedImage = localStorage.getItem('uploadedImage');
-            if (savedImage) {
-                uploadedImage.src = savedImage;
-                uploadedImage.style.display = 'block';
-            }
-        };
-
-        // Handle the form submission
-        uploadForm.addEventListener('submit', (event) => {
-            event.preventDefault();
-            const file = fileInput.files[0];
-
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = () => {
-                    const base64String = reader.result;
-                    localStorage.setItem('uploadedImage', base64String); // Save the image in localStorage
-                    uploadedImage.src = base64String;
-                    uploadedImage.style.display = 'block';
-                    alert('Image uploaded successfully!');
-                };
-                reader.readAsDataURL(file); // Convert the image to a Base64 string
-            } else {
-                alert('Please select an image to upload.');
-            }
-        });
-    </script>
-</body>
-</html>
